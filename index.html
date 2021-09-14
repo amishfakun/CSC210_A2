@@ -1,119 +1,57 @@
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chmmod Calculator</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chmmod Calculator</title>
+  </head>
+  <body>
     <h1>Chmod calculator</h1>
 
-    <!-- <p id="demo">Click the button to change the layout of this paragraph</p>
-
-
-
-    <button onclick="myFunction()">Click Me!</button> -->
-
-
-    <div class = "flex-container">
-
-        <div class = "classChild">
-            Owner
-
-            <!-- <form>
-                <label for="checked">
-
-                    <input type="checkbox" id="checked" name="checked"> 
-                    Read
-
-
-                </label>
-
-
-
-
-            </form> -->
-            
-
-
-
-
-                <p>
-                <input type="checkbox" id="Owner-Read" name="Check" value="r">
-                <label for="Owner-Read"> Read</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Owner-Write" name="Check" value="w">
-                <label for="Owner-Write"> Write</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Owner-Execute" name="Check" value="e">
-                <label for="Owner-Execute"> Execute</label>
-                </p>
-              
-
-        </div>
-    
-        <div class = "classChild">
-            Group
-
-            
-            <p>
-                <input type="checkbox" id="Group-Read" name="Check" value="r">
-                <label for="Group-Read"> Read</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Group-Write" name="Check" value="w">
-                <label for="Group-Write"> Write</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Group-Execute" name="Check" value="e">
-                <label for="Group-Execute"> Execute</label>
-                </p>
-        </div>
-    
-        <div class = "classChild">
-            Public
-
-            
-            <p>
-                <input type="checkbox" id="Public-Read" name="Check" value="r">
-                <label for="Public-Read"> Read</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Public-Write" name="Check" value="w">
-                <label for="Public-Write"> Write</label>
-                </p>
-                <p>
-                <input type="checkbox" id="Public-Execute" name="Check" value="e">
-                <label for="Public-Execute"> Execute</label>
-                </p>
+    <div class="inputFields">
+      <form action="/action_page.php" method="post">
+        <div class="classChild">
+          <h2>Owner</h2>
+          <input type="checkbox" name="r" id="OR" value="400" />Read<br />
+          <input type="checkbox" name="w" id="OW" value="200" /> Write<br />
+          <input type="checkbox" name="x" id="OE" value="100" /> Execute<br />
         </div>
 
+        <div class="classChild">
+          <h2>Group</h2>
+          <input type="checkbox" name="r" id="GR" value="40" />Read<br />
+          <input type="checkbox" name="w" id="GW" value="20" /> Write<br />
+          <input type="checkbox" name="x" id="GE" value="10" /> Execute<br />
+        </div>
+
+        <div class="classChild">
+          <h2>Public</h2>
+          <input type="checkbox" name="r" id="PR" value="4" />Read<br />
+          <input type="checkbox" name="w" id="PW" value="2" /> Write<br />
+          <input type="checkbox" name="x" id="PE" value="1" /> Execute<br />
+        </div>
+
+        <div>
+          <h3>Selected Permission(s)</h3>
+        </div>
+        <!-- container for displaying selected seats -->
+        <ul class="symbols" id="selected-seats"></ul>
+
+        <div>
+          Total: <span id="seats-total">0</span>
+          <!-- <input type="submit" value="Reserve Now" /> -->
+        </div>
+      </form>
+
+      <h2>Linux Permission</h2>
+
+      <p>
+        Chmod Calculator is a free utility to calculate the numeric (octal) or
+        symbolic value for a set of file or folder permissions in Linux servers.
+      </p>
     </div>
-    <h1>
-    <button id="button"> Computer Permissions
-        </button>
-    </h1>
+
     <script src="script.js"></script>
-    <div class = "inputFields">
-
-        <h2>Linux Permission</h2>
-
-        <p>
-            Chmod Calculator is a free utility to calculate the numeric (octal) or symbolic value for a set of file or folder permissions in Linux servers.
-
-        </p>
-
-
-
-    </div>
-    
-
-
-
-    
-</body>
+  </body>
 </html>

@@ -1,39 +1,33 @@
-// var x = document.getElementById("Owner-Read");
 
-// x.addEventListener('change', myFunction());
+    var selections = {};
+    var checkboxElems = document.querySelectorAll("input[type='checkbox']");
+   var totalElem = document.getElementById("seats-total");
+    var seatsElem = document.getElementById("selected-seats");
 
-// function myFunction() {
-//     if(this.checked) {
-//         alert("checked!");
-//     }
-//     else{
-//         alert("Unchecked!");
+    for (var i = 0; i < checkboxElems.length; i++) {
+      checkboxElems[i].addEventListener("click", displayCheck);
+    }
 
-//     }
-// }
+    function displayCheck(e) {
+      if (e.target.checked) {
+        selections[e.target.id] = {
+          name: e.target.name,
+          value: e.target.value,
+        };
+      } else {
+        delete selections[e.target.id];
+      }
 
+      var result = [];
+      var total = 0;
 
-// function myFunction() {
-//     let x = document.getElementById("demo");
-//     x.style.fontSize = "25px"; 
-//     x.style.color = "red"; 
-//   }
+      for (var key in selections) {
+        var listItem =
+          "<li>" + selections[key].name  + "</li>";
+        result.push(listItem);
+        total += parseInt(selections[key].value);
+      }
 
-
-// const cb = document.querySelector('#checked');
-
-// cb.addEventListener('change', myFunction());
-
-function myFunction(name) {
-    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
-    let values=[];
-    checkboxes.forEach((checkbox) => {
-        values.push(checkbox.value);
-    }    );
-    return values;
-}
-
-const button = document.querySelector('#button');
-button.addEventListener('click', (event)=> {
-    alert(myFunction('Check'));
-});
+      totalElem.innerText = total;
+      seatsElem.innerHTML = result.join("");
+    }
