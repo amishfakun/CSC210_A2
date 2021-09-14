@@ -1,13 +1,20 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chmmod Calculator</title>
 </head>
 <body>
+
     <h1>Chmod calculator</h1>
+
+    <!-- <p id="demo">Click the button to change the layout of this paragraph</p>
+
+
+
+    <button onclick="myFunction()">Click Me!</button> -->
 
 
     <div class = "flex-container">
@@ -15,46 +22,82 @@
         <div class = "classChild">
             Owner
 
-            <form action="/action_page.php">
-                <input type="checkbox" >
-                <label for="Owner-Read"> Read</label><br>
-                <input type="checkbox">
-                <label for="Owner-Write"> Write</label><br>
-                <input type="checkbox" >
-                <label for="Owner-Execute"> Execute</label><br><br>
-              </form>
+            <!-- <form>
+                <label for="checked">
+
+                    <input type="checkbox" id="checked" name="checked"> 
+                    Read
+
+
+                </label>
+
+
+
+
+            </form> -->
+            
+
+
+
+
+                <p>
+                <input type="checkbox" id="Owner-Read" name="Check" value="r">
+                <label for="Owner-Read"> Read</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Owner-Write" name="Check" value="w">
+                <label for="Owner-Write"> Write</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Owner-Execute" name="Check" value="e">
+                <label for="Owner-Execute"> Execute</label>
+                </p>
+              
 
         </div>
     
         <div class = "classChild">
             Group
 
-            <form action="/action_page.php">
-                <input type="checkbox" >
-                <label for="Group-Read"> Read</label><br>
-                <input type="checkbox">
-                <label for="Group-Write"> Write</label><br>
-                <input type="checkbox" >
-                <label for="Group-Execute"> Execute</label><br><br>
-              </form>
+            
+            <p>
+                <input type="checkbox" id="Group-Read" name="Check" value="r">
+                <label for="Group-Read"> Read</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Group-Write" name="Check" value="w">
+                <label for="Group-Write"> Write</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Group-Execute" name="Check" value="e">
+                <label for="Group-Execute"> Execute</label>
+                </p>
         </div>
     
         <div class = "classChild">
             Public
 
-            <form action="/action_page.php">
-                <input type="checkbox" >
-                <label for="Public-Read"> Read</label><br>
-                <input type="checkbox">
-                <label for="Public-Write"> Write</label><br>
-                <input type="checkbox" >
-                <label for="Public-Execute"> Execute</label><br><br>
-              </form>
+            
+            <p>
+                <input type="checkbox" id="Public-Read" name="Check" value="r">
+                <label for="Public-Read"> Read</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Public-Write" name="Check" value="w">
+                <label for="Public-Write"> Write</label>
+                </p>
+                <p>
+                <input type="checkbox" id="Public-Execute" name="Check" value="e">
+                <label for="Public-Execute"> Execute</label>
+                </p>
         </div>
 
     </div>
-
-
+    <h1>
+    <button id="button"> Computer Permissions
+        </button>
+    </h1>
+    <script src="script.js"></script>
     <div class = "inputFields">
 
         <h2>Linux Permission</h2>
@@ -67,6 +110,8 @@
 
 
     </div>
+    
+
 
 
     
