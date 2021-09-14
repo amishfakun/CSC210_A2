@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+}
+
+/* *{
+
+    box-sizing: border-box;
+} */
+
+.classChild {
+
+
+    float: left;
+    width: 33%;
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.inputFields{
+
+    text-align: center;
+    border:1px solid black;
+    background-color: lightsteelblue;
+    
+}
+
+
