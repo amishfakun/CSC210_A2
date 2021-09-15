@@ -25,7 +25,16 @@ h1{
     
 }
 
-li{
+ li{
     display: inline;
 }
 
+
+.btn {
+    border: none;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline;
+  }
