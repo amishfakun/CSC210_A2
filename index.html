@@ -13,35 +13,36 @@
       <form action="/action_page.php" method="post">
         <div class="classChild">
           <h2>Owner</h2>
-          <input type="checkbox" name="r" id="OR" value="400" default='-'/>Read<br />
-          <input type="checkbox" name="w" id="OW" value="200" default='-' /> Write<br />
-          <input type="checkbox" name="x" id="OE" value="100" default='-'/> Execute<br />
+          <input type="checkbox" name="0" id="OR" value="400" default='-'/>Read<br />
+          <input type="checkbox" name="1" id="OW" value="200" default='-' /> Write<br />
+          <input type="checkbox" name="2" id="OE" value="100" default='-'/> Execute<br />
         </div>
 
         <div class="classChild">
           <h2>Group</h2>
-          <input type="checkbox" name="r" id="GR" value="40" default='-'/>Read<br />
-          <input type="checkbox" name="w" id="GW" value="20" default='-'/> Write<br />
-          <input type="checkbox" name="x" id="GE" value="10" default='-'/> Execute<br />
+          <input type="checkbox" name="3" id="GR" value="40" default='-'/>Read<br />
+          <input type="checkbox" name="4" id="GW" value="20" default='-'/> Write<br />
+          <input type="checkbox" name="5" id="GE" value="10" default='-'/> Execute<br />
         </div>
 
         <div class="classChild">
           <h2>Public</h2>
-          <input type="checkbox" name="r" id="PR" value="4" default='-'/>Read<br />
-          <input type="checkbox" name="w" id="PW" value="2" default='-'/> Write<br />
-          <input type="checkbox" name="x" id="PE" value="1" default='-'/> Execute<br />
+          <input type="checkbox" name="6" id="PR" value="4" default='-'/>Read<br />
+          <input type="checkbox" name="7" id="PW" value="2" default='-'/> Write<br />
+          <input type="checkbox" name="8" id="PE" value="1" default='-'/> Execute<br />
         </div>
 
         <div>
           <h3>Selected Permission(s)</h3>
         </div>
-        <!-- container for displaying selected seats -->
-        <ul class="symbols" id="selected-seats"></ul>
+        
+       
  
 
         <div>
-          Total: <span id="seats-total">0</span>
-          <!-- <input type="submit" value="Reserve Now" /> -->
+          
+          <p id="result" style="display:none">Linux File Permission is <span id="numericTotal"></span> in numeric mode and <span id="octalSymbol"></span> in  octal mode.</p>
+         
         </div>
       </form>
 
@@ -53,9 +54,7 @@
       </p>
     </div>
 
-    <button class="btn calculate" onclick="chmodResult()">Calculate</button>
-
-    <p id="result" style="display:none">Linux File Permission is <span id="chmodDecValue"></span> in absolute mode and <span id="chmodSymbol"></span> in  symbolic mode.</p>
+    
 
     <script src="script.js"></script>
   </body>
